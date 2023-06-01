@@ -66,8 +66,6 @@ def suggest_known_users(user_name):
     return result
 
 
-
-# Example usage
 create_company("ABC Company", "Technology", "A technology company", "Large")
 create_user("John Doe", "John", "Software Engineer", ["Python", "Java", "SQL"])
 create_worked_for_relation("John Doe", "ABC Company", "2022-01-01", "2022-12-31", "Employee")
@@ -75,23 +73,6 @@ create_user("Jane Smith", "Jane", "Data Scientist", ["Python", "R", "Machine Lea
 create_worked_for_relation("Jane Smith", "ABC Company", "2022-01-01", "2023-06-30", "Contractor")
 create_worked_with_relation("John Doe", "Jane Smith")
 create_knows_relation("John Doe", "Jane Smith")
-
-
-company_results = search_company_by_name("ABC")
-for company in company_results:
-    print(company["c"]["name"])
-
-user_results = search_user_by_name("John")
-for user in user_results:
-    print(user["u"]["name"])
-
-suggested_users = suggest_users_worked_together("John Doe", "ABC Company")
-for record in suggested_users:
-    print(record["u2"]["name"])
-
-known_users = suggest_known_users("John Doe")
-for user in known_users:
-    print(user["u2"]["name"])
 
 
 driver.close()
