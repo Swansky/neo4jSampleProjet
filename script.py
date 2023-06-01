@@ -3,7 +3,7 @@ from neo4j import GraphDatabase
 
 uri = "bolt://localhost:7687"
 username = "neo4j"
-password = "password" # IDK Depend on local config
+password = "exampleexample"
 
 driver = GraphDatabase.driver(uri, auth=(username, password))
 
@@ -93,5 +93,5 @@ known_users = suggest_known_users("John Doe")
 for user in known_users:
     print(user["u2"]["name"])
 
-# Close the Neo4j driver
+
 driver.close()
